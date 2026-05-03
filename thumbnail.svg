@@ -1,34 +1,119 @@
-<svg width="512" height="512" viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg">
-  <!-- Background gradient -->
+<svg width="1800" height="560" viewBox="0 0 1800 560" xmlns="http://www.w3.org/2000/svg">
   <defs>
-    <linearGradient id="grad" x1="0%" y1="0%" x2="100%" y2="100%">
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
       <stop offset="0%" style="stop-color:#7c3aed;stop-opacity:1" />
-      <stop offset="100%" style="stop-color:#6366f1;stop-opacity:1" />
+      <stop offset="50%" style="stop-color:#6366f1;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#0891b2;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="cardGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#ffffff;stop-opacity:0.95" />
+      <stop offset="100%" style="stop-color:#f3f4f6;stop-opacity:0.95" />
     </linearGradient>
   </defs>
 
   <!-- Background -->
-  <rect width="512" height="512" fill="url(#grad)"/>
+  <rect width="1800" height="560" fill="url(#bgGrad)"/>
 
-  <!-- Document shape -->
-  <g transform="translate(128, 96)">
-    <!-- Paper background -->
-    <rect x="0" y="0" width="256" height="320" rx="16" fill="white" opacity="0.95"/>
+  <!-- Top accent line -->
+  <rect width="1800" height="4" fill="white" opacity="0.2"/>
+
+  <!-- Left card: Document Input -->
+  <g transform="translate(60, 80)">
+    <rect width="300" height="400" rx="16" fill="url(#cardGrad)" filter="drop-shadow(0 20px 40px rgba(0,0,0,0.2))"/>
+
+    <!-- Document icon -->
+    <rect x="50" y="40" width="200" height="260" rx="8" fill="none" stroke="#7c3aed" stroke-width="6"/>
 
     <!-- Document lines -->
-    <line x1="32" y1="80" x2="224" y2="80" stroke="#e5e7eb" stroke-width="8" stroke-linecap="round"/>
-    <line x1="32" y1="120" x2="224" y2="120" stroke="#e5e7eb" stroke-width="8" stroke-linecap="round"/>
-    <line x1="32" y1="160" x2="224" y2="160" stroke="#e5e7eb" stroke-width="8" stroke-linecap="round"/>
-    <line x1="32" y1="200" x2="224" y2="200" stroke="#e5e7eb" stroke-width="8" stroke-linecap="round"/>
-    <line x1="32" y1="240" x2="160" y2="240" stroke="#e5e7eb" stroke-width="8" stroke-linecap="round"/>
+    <line x1="80" y1="90" x2="220" y2="90" stroke="#e5e7eb" stroke-width="6" stroke-linecap="round"/>
+    <line x1="80" y1="130" x2="220" y2="130" stroke="#e5e7eb" stroke-width="6" stroke-linecap="round"/>
+    <line x1="80" y1="170" x2="220" y2="170" stroke="#e5e7eb" stroke-width="6" stroke-linecap="round"/>
+    <line x1="80" y1="210" x2="180" y2="210" stroke="#e5e7eb" stroke-width="6" stroke-linecap="round"/>
+
+    <!-- Input label -->
+    <text x="150" y="350" font-size="18" font-weight="600" fill="#1f2937" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif">Input</text>
+    <text x="150" y="375" font-size="14" fill="#6b7280" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif">DOCX • TXT • MD • JSON</text>
   </g>
 
-  <!-- Markdown symbol (#) overlaid -->
-  <g transform="translate(256, 320)">
-    <!-- # symbol -->
-    <text x="0" y="0" font-size="120" font-weight="bold" fill="white" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif">#</text>
+  <!-- Arrow: Transform -->
+  <g transform="translate(420, 260)">
+    <!-- Arrow shaft -->
+    <line x1="0" y1="0" x2="80" y2="0" stroke="white" stroke-width="4" opacity="0.8"/>
+    <!-- Arrow head -->
+    <polygon points="80,0 60,-10 60,10" fill="white" opacity="0.8"/>
+    <!-- Spark effect -->
+    <circle cx="40" cy="-25" r="4" fill="#fbbf24" opacity="0.8"/>
+    <circle cx="50" cy="-15" r="3" fill="#fbbf24" opacity="0.6"/>
   </g>
 
-  <!-- Accent circle -->
-  <circle cx="256" cy="256" r="240" fill="none" stroke="white" stroke-width="4" opacity="0.1"/>
+  <!-- Center: Processing -->
+  <g transform="translate(560, 80)">
+    <rect width="300" height="400" rx="16" fill="url(#cardGrad)" filter="drop-shadow(0 20px 40px rgba(0,0,0,0.2))"/>
+
+    <!-- Code/Processing symbol -->
+    <text x="150" y="120" font-size="72" font-weight="bold" fill="#6366f1" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif">&lt;/&gt;</text>
+
+    <!-- Processing label -->
+    <text x="150" y="200" font-size="18" font-weight="600" fill="#1f2937" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif">Processing</text>
+
+    <!-- Features -->
+    <text x="30" y="250" font-size="13" fill="#4b5563" font-family="system-ui, -apple-system, sans-serif">✓ Validation</text>
+    <text x="30" y="280" font-size="13" fill="#4b5563" font-family="system-ui, -apple-system, sans-serif">✓ Cleanup</text>
+    <text x="30" y="310" font-size="13" fill="#4b5563" font-family="system-ui, -apple-system, sans-serif">✓ Formatting</text>
+
+    <text x="170" y="250" font-size="13" fill="#4b5563" font-family="system-ui, -apple-system, sans-serif">✓ GFM Tables</text>
+    <text x="170" y="280" font-size="13" fill="#4b5563" font-family="system-ui, -apple-system, sans-serif">✓ Dark Mode</text>
+    <text x="170" y="310" font-size="13" fill="#4b5563" font-family="system-ui, -apple-system, sans-serif">✓ Privacy</text>
+  </g>
+
+  <!-- Arrow: Output -->
+  <g transform="translate(920, 260)">
+    <!-- Arrow shaft -->
+    <line x1="0" y1="0" x2="80" y2="0" stroke="white" stroke-width="4" opacity="0.8"/>
+    <!-- Arrow head -->
+    <polygon points="80,0 60,-10 60,10" fill="white" opacity="0.8"/>
+  </g>
+
+  <!-- Right card: Markdown Output -->
+  <g transform="translate(1060, 80)">
+    <rect width="300" height="400" rx="16" fill="url(#cardGrad)" filter="drop-shadow(0 20px 40px rgba(0,0,0,0.2))"/>
+
+    <!-- Markdown document -->
+    <rect x="40" y="30" width="220" height="260" rx="8" fill="#f9fafb" stroke="#0891b2" stroke-width="6"/>
+
+    <!-- Markdown symbol -->
+    <text x="70" y="100" font-size="36" font-weight="bold" fill="#0891b2" font-family="system-ui, -apple-system, sans-serif">#</text>
+    <line x1="110" y1="70" x2="210" y2="70" stroke="#d1d5db" stroke-width="5" stroke-linecap="round"/>
+
+    <!-- Markdown lines -->
+    <line x1="70" y1="120" x2="210" y2="120" stroke="#e5e7eb" stroke-width="4" stroke-linecap="round"/>
+    <line x1="70" y1="145" x2="210" y2="145" stroke="#e5e7eb" stroke-width="4" stroke-linecap="round"/>
+    <line x1="70" y1="170" x2="180" y2="170" stroke="#e5e7eb" stroke-width="4" stroke-linecap="round"/>
+
+    <!-- Output modes -->
+    <text x="150" y="350" font-size="18" font-weight="600" fill="#1f2937" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif">Output</text>
+    <text x="150" y="375" font-size="14" fill="#6b7280" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif">Code • Table • Readable</text>
+  </g>
+
+  <!-- Top branding -->
+  <g transform="translate(1480, 100)">
+    <!-- Logo symbol -->
+    <circle cx="30" cy="30" r="28" fill="white" opacity="0.15"/>
+    <text x="30" y="42" font-size="48" font-weight="bold" fill="white" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif">#</text>
+  </g>
+
+  <!-- Title and tagline -->
+  <g transform="translate(1480, 160)">
+    <text x="0" y="0" font-size="42" font-weight="800" fill="white" font-family="system-ui, -apple-system, sans-serif">Markly</text>
+    <text x="0" y="45" font-size="18" fill="rgba(255,255,255,0.9)" font-family="system-ui, -apple-system, sans-serif">Smart document to markdown</text>
+    <text x="0" y="70" font-size="16" fill="rgba(255,255,255,0.8)" font-family="system-ui, -apple-system, sans-serif">converter. 100% client-side.</text>
+  </g>
+
+  <!-- Bottom features row -->
+  <g transform="translate(100, 520)">
+    <text x="0" y="0" font-size="14" fill="rgba(255,255,255,0.9)" font-family="system-ui, -apple-system, sans-serif">⚡ Client-side only</text>
+    <text x="300" y="0" font-size="14" fill="rgba(255,255,255,0.9)" font-family="system-ui, -apple-system, sans-serif">🔒 No data tracking</text>
+    <text x="650" y="0" font-size="14" fill="rgba(255,255,255,0.9)" font-family="system-ui, -apple-system, sans-serif">🎨 Dark & light themes</text>
+    <text x="1100" y="0" font-size="14" fill="rgba(255,255,255,0.9)" font-family="system-ui, -apple-system, sans-serif">📊 Validation & fixing</text>
+  </g>
 </svg>
