@@ -111,9 +111,9 @@
 
   <!-- Bottom features row -->
   <g transform="translate(100, 520)">
-    <text x="0" y="0" font-size="14" fill="rgba(255,255,255,0.9)" font-family="system-ui, -apple-system, sans-serif">⚡ Client-side only</text>
-    <text x="300" y="0" font-size="14" fill="rgba(255,255,255,0.9)" font-family="system-ui, -apple-system, sans-serif">🔒 No data tracking</text>
-    <text x="650" y="0" font-size="14" fill="rgba(255,255,255,0.9)" font-family="system-ui, -apple-system, sans-serif">🎨 Dark & light themes</text>
-    <text x="1100" y="0" font-size="14" fill="rgba(255,255,255,0.9)" font-family="system-ui, -apple-system, sans-serif">📊 Validation & fixing</text>
+    <text x="0" y="0" font-size="14" fill="rgba(255,255,255,0.9)" font-family="system-ui, -apple-system, sans-serif">Lightning Fast</text>
+    <text x="300" y="0" font-size="14" fill="rgba(255,255,255,0.9)" font-family="system-ui, -apple-system, sans-serif">Private and Secure</text>
+    <text x="700" y="0" font-size="14" fill="rgba(255,255,255,0.9)" font-family="system-ui, -apple-system, sans-serif">Dark Mode Support</text>
+    <text x="1150" y="0" font-size="14" fill="rgba(255,255,255,0.9)" font-family="system-ui, -apple-system, sans-serif">Smart Validation</text>
   </g>
 </svg>
