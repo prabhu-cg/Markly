@@ -1,0 +1,167 @@
+{
+  "company": {
+    "name": "TechFlow Solutions",
+    "founded": 2018,
+    "headquarters": "San Francisco, CA",
+    "mission": "Empowering teams with intelligent document automation",
+    "website": "https://techflow.example.com"
+  },
+  "products": [
+    {
+      "id": 1,
+      "name": "Markly",
+      "type": "Document Converter",
+      "version": "2.0.0",
+      "status": "active",
+      "users": 50000,
+      "rating": 4.8
+    },
+    {
+      "id": 2,
+      "name": "DocSync",
+      "type": "Collaboration Tool",
+      "version": "1.5.0",
+      "status": "active",
+      "users": 35000,
+      "rating": 4.6
+    },
+    {
+      "id": 3,
+      "name": "ContentFlow",
+      "type": "CMS Platform",
+      "version": "3.1.0",
+      "status": "active",
+      "users": 25000,
+      "rating": 4.7
+    }
+  ],
+  "team": [
+    {
+      "name": "Alice Johnson",
+      "role": "Chief Executive Officer",
+      "department": "Executive",
+      "years_experience": 15,
+      "expertise": ["Leadership", "Strategy", "Product Vision"]
+    },
+    {
+      "name": "Bob Chen",
+      "role": "Chief Technology Officer",
+      "department": "Engineering",
+      "years_experience": 12,
+      "expertise": ["Architecture", "Scalability", "Cloud Infrastructure"]
+    },
+    {
+      "name": "Carol Martinez",
+      "role": "VP of Design",
+      "department": "Design",
+      "years_experience": 10,
+      "expertise": ["UI/UX", "Design Systems", "User Research"]
+    },
+    {
+      "name": "David Park",
+      "role": "Head of Sales",
+      "department": "Sales",
+      "years_experience": 8,
+      "expertise": ["Enterprise Sales", "Customer Relations", "Growth"]
+    }
+  ],
+  "features": {
+    "core": [
+      "Real-time document conversion",
+      "Multiple format support",
+      "Quality validation",
+      "Advanced formatting"
+    ],
+    "premium": [
+      "Batch processing",
+      "API access",
+      "Custom templates",
+      "Priority support",
+      "Advanced analytics"
+    ],
+    "enterprise": [
+      "Dedicated account manager",
+      "Custom integration",
+      "SLA guarantee",
+      "On-premise option",
+      "Advanced security"
+    ]
+  },
+  "financial_overview": {
+    "quarterly_revenue": {
+      "Q1_2024": 2500000,
+      "Q2_2024": 2750000,
+      "Q3_2024": 3100000,
+      "Q4_2024": 3450000
+    },
+    "growth_rate": "38%",
+    "funding": {
+      "series_a": 5000000,
+      "series_b": 15000000,
+      "total": 20000000
+    },
+    "profitability": true,
+    "market_cap_estimate": "180000000"
+  },
+  "technology_stack": {
+    "frontend": {
+      "frameworks": ["React", "Vue.js"],
+      "styling": ["Tailwind CSS", "PostCSS"],
+      "state": ["Zustand", "Redux"]
+    },
+    "backend": {
+      "languages": ["TypeScript", "Python", "Go"],
+      "databases": ["PostgreSQL", "MongoDB", "Redis"],
+      "infrastructure": ["AWS", "Docker", "Kubernetes"]
+    },
+    "tools": [
+      "Vite",
+      "webpack",
+      "Jest",
+      "ESLint",
+      "GitHub Actions"
+    ]
+  },
+  "supported_formats": {
+    "input": {
+      "office": ["docx", "doc", "xlsx"],
+      "text": ["txt", "csv"],
+      "markup": ["md", "html"],
+      "data": ["json", "yaml", "xml"]
+    },
+    "output": {
+      "primary": "markdown",
+      "secondary": ["html", "pdf"],
+      "formats": 3
+    }
+  },
+  "roadmap": [
+    {
+      "quarter": "Q1 2025",
+      "focus": "AI-powered content optimization",
+      "items": [
+        "Smart content summarization",
+        "Automatic formatting suggestions",
+        "Content quality scoring"
+      ]
+    },
+    {
+      "quarter": "Q2 2025",
+      "focus": "Advanced automation",
+      "items": [
+        "Batch file processing",
+        "Scheduled conversions",
+        "Webhook integrations"
+      ]
+    },
+    {
+      "quarter": "Q3 2025",
+      "focus": "Enterprise features",
+      "items": [
+        "Role-based access control",
+        "Audit logging",
+        "Advanced analytics dashboard"
+      ]
+    }
+  ]
+}

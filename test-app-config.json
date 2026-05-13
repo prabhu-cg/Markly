@@ -1,0 +1,33 @@
+{
+  "app": {
+    "name": "Markly",
+    "version": "2.0.0",
+    "description": "Convert documents to markdown with validation",
+    "features": ["JSON conversion", "Markdown validation", "Table generation"],
+    "components": [
+      {
+        "name": "InputPanel",
+        "path": "src/components/input/InputPanel.tsx",
+        "exports": ["InputPanel"],
+        "type": "container"
+      },
+      {
+        "name": "OutputPanel",
+        "path": "src/components/output/OutputPanel.tsx",
+        "exports": ["OutputPanel"],
+        "type": "container"
+      },
+      {
+        "name": "JsonModeSelector",
+        "path": "src/components/input/JsonModeSelector.tsx",
+        "exports": ["JsonModeSelector"],
+        "type": "control"
+      }
+    ],
+    "settings": {
+      "theme": "dark",
+      "autoValidate": true,
+      "defaultJsonMode": "readable"
+    }
+  }
+}
