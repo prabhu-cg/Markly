@@ -24,7 +24,7 @@ export function IssueList({
   if (filtered.length === 0) {
     return (
       <div className="flex-1 flex items-center justify-center text-center px-4">
-        <p className="text-sm text-slate-500 dark:text-zinc-400">
+        <p className="text-sm text-text-muted">
           {issues.length === 0 ? 'No issues found' : 'No issues match the current filter'}
         </p>
       </div>

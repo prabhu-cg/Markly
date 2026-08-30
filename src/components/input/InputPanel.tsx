@@ -34,8 +34,8 @@ export function InputPanel() {
 
   return (
     <div className="flex flex-col flex-1 overflow-hidden">
-      <div className="h-10 flex items-center justify-between px-4 border-b border-slate-200 dark:border-zinc-800 bg-slate-100 dark:bg-zinc-900/50 shrink-0">
-        <span className="text-xs font-medium text-slate-600 dark:text-zinc-400 uppercase tracking-wider">
+      <div className="h-10 flex items-center justify-between px-4 border-b border-border bg-surface-muted shrink-0">
+        <span className="text-xs font-medium text-text-muted uppercase tracking-wider">
           Input
         </span>
         <div className="flex items-center gap-2">
@@ -54,7 +54,7 @@ export function InputPanel() {
             disabled={!hasInput && !rawInput}
           >
             <Trash size={16} />
-            Clear All
+            <span className="hidden lg:inline">Clear All</span>
           </Button>
         </div>
       </div>
@@ -63,7 +63,7 @@ export function InputPanel() {
 
       {isJsonInput && <JsonModeSelector />}
 
-      {showUploadZone && <div className="h-px bg-slate-200 dark:bg-zinc-800 mx-4 shrink-0" />}
+      {showUploadZone && <div className="h-px bg-border mx-4 shrink-0" />}
       <div className="flex-1 flex flex-col overflow-hidden">
         <PasteArea />
       </div>

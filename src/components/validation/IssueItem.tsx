@@ -8,10 +8,10 @@ interface IssueItemProps {
   onScrollToLine: (line: number) => void
 }
 
-const badgeColorMap: Record<ValidationIssue['type'], 'red' | 'amber' | 'sky'> = {
-  error: 'red',
-  warning: 'amber',
-  suggestion: 'sky',
+const badgeColorMap: Record<ValidationIssue['type'], 'danger' | 'warning' | 'info'> = {
+  error: 'danger',
+  warning: 'warning',
+  suggestion: 'info',
 }
 
 export function IssueItem({ issue, onFix, onScrollToLine }: IssueItemProps) {
@@ -22,7 +22,7 @@ export function IssueItem({ issue, onFix, onScrollToLine }: IssueItemProps) {
   }
 
   return (
-    <div className="flex items-start gap-3 px-4 py-2 border-b border-slate-200 dark:border-zinc-800 hover:bg-slate-100 dark:hover:bg-zinc-800/50 transition-colors group">
+    <div className="flex items-start gap-3 px-4 py-2 border-b border-border hover:bg-surface transition-colors group">
       <div className="flex-1 min-w-0 pt-0.5">
         <div className="flex items-center gap-2 mb-1">
           <Badge color={badgeColorMap[issue.type]}>
@@ -30,12 +30,12 @@ export function IssueItem({ issue, onFix, onScrollToLine }: IssueItemProps) {
           </Badge>
           <button
             onClick={() => onScrollToLine(issue.line)}
-            className="text-xs text-slate-500 dark:text-zinc-400 hover:text-slate-700 dark:hover:text-zinc-200 transition-colors"
+            className="text-xs text-text-subtle hover:text-text transition-colors"
           >
             Line {issue.line}
           </button>
         </div>
-        <p className="text-xs text-slate-700 dark:text-zinc-300 break-words">{issue.message}</p>
+        <p className="text-xs text-text-muted break-words">{issue.message}</p>
       </div>
 
       {issue.fixable && (

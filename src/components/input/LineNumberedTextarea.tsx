@@ -37,9 +37,9 @@ export function LineNumberedTextarea({
       {/* Line numbers column */}
       <div
         ref={lineNumbersRef}
-        className="overflow-hidden bg-slate-50 dark:bg-zinc-900 border-r border-slate-200 dark:border-zinc-800 select-none"
+        className="overflow-hidden bg-surface-muted border-r border-border select-none"
       >
-        <div className="flex flex-col px-3 py-3 text-right font-mono text-xs text-slate-500 dark:text-zinc-600 leading-5">
+        <div className="flex flex-col px-3 py-3 text-right font-mono text-xs text-text-subtle leading-5">
           {Array.from({ length: lineCount }, (_, i) => (
             <div key={i + 1} className="h-5">
               {i + 1}
@@ -51,7 +51,7 @@ export function LineNumberedTextarea({
       {/* Textarea */}
       <textarea
         ref={textareaRef}
-        className="flex-1 w-full resize-none bg-transparent px-4 py-3 text-sm font-mono text-slate-900 dark:text-zinc-300 placeholder:text-slate-500 dark:placeholder:text-zinc-600/70 focus:outline-none overflow-y-auto"
+        className="flex-1 w-full resize-none bg-transparent px-4 py-3 text-sm font-mono text-text placeholder:text-text-subtle focus:outline-none overflow-y-auto"
         placeholder={placeholder}
         value={value}
         onChange={onChange}

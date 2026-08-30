@@ -15,9 +15,9 @@ export function DropZone() {
 
   if (filename) {
     return (
-      <div className="m-4 flex items-center gap-2 rounded-lg bg-slate-200 dark:bg-zinc-800 px-3 py-2 text-sm">
+      <div className="m-4 flex items-center gap-2 rounded-md bg-surface-muted border border-border px-3 py-2 text-sm">
         <svg
-          className="h-4 w-4 text-slate-500 dark:text-zinc-400"
+          className="h-4 w-4 text-text-muted"
           fill="currentColor"
           viewBox="0 0 20 20"
         >
@@ -27,10 +27,10 @@ export function DropZone() {
             d="M12.316 3.051a1 1 0 01.633 1.265l-4 12a1 1 0 11-1.898-.632l4-12a1 1 0 011.265-.633z"
           />
         </svg>
-        <span className="truncate text-slate-700 dark:text-zinc-300">{filename}</span>
+        <span className="truncate text-text">{filename}</span>
         <button
           onClick={() => setRawInput(null)}
-          className="ml-auto text-slate-500 dark:text-zinc-500 hover:text-slate-700 dark:hover:text-zinc-300"
+          className="ml-auto text-text-subtle hover:text-text"
         >
           ✕
         </button>
@@ -40,10 +40,10 @@ export function DropZone() {
 
   return (
     <div
-      className={`m-4 rounded-xl border-2 border-dashed transition-all flex flex-col items-center justify-center gap-3 py-10 shrink-0 cursor-pointer ${
+      className={`m-4 rounded-md border-2 border-dashed transition-all flex flex-col items-center justify-center gap-3 py-10 shrink-0 cursor-pointer ${
         isDragging
-          ? 'border-purple-500 bg-purple-50 dark:bg-purple-500/10 shadow-lg shadow-purple-500/20'
-          : 'border-slate-300 dark:border-zinc-700 hover:border-purple-400 dark:hover:border-purple-500/50 hover:bg-slate-100 dark:hover:bg-zinc-900/50 bg-slate-50 dark:bg-zinc-900/30'
+          ? 'border-primary bg-surface-muted'
+          : 'border-border-strong hover:border-primary bg-background'
       }`}
       onDrop={onDrop}
       onDragOver={onDragOver}
@@ -52,7 +52,7 @@ export function DropZone() {
       <div className={`transition-transform ${isDragging ? 'scale-110' : 'scale-100'}`}>
         <svg
           className={`h-12 w-12 transition-colors ${
-            isDragging ? 'text-purple-500 dark:text-purple-400' : 'text-slate-400 dark:text-zinc-500'
+            isDragging ? 'text-primary' : 'text-text-subtle'
           }`}
           fill="none"
           viewBox="0 0 24 24"
@@ -67,9 +67,9 @@ export function DropZone() {
         </svg>
       </div>
       <div className="text-center">
-        <p className="text-sm font-medium text-slate-700 dark:text-zinc-300">
+        <p className="text-sm font-medium text-text">
           Drop files here or{' '}
-          <label className="text-purple-600 dark:text-purple-400 hover:text-purple-700 dark:hover:text-purple-300 underline cursor-pointer font-semibold">
+          <label className="text-primary hover:text-primary-hover underline cursor-pointer font-semibold">
             browse
             <input
               ref={inputRef}
@@ -80,23 +80,19 @@ export function DropZone() {
             />
           </label>
         </p>
-        <p className="text-xs text-slate-500 dark:text-zinc-500 mt-1">
+        <p className="text-xs text-text-subtle mt-1">
           Supports all formats: Word, Text, Markdown, and JSON
         </p>
       </div>
       <div className="flex gap-2 mt-3 flex-wrap justify-center max-w-xs">
-        <div style={{ display: 'inline-flex', height: '28px', alignItems: 'center', justifyContent: 'center', padding: '0 12px', borderRadius: '9999px', fontSize: '12px', fontWeight: 600, backgroundColor: '#fce7f3', color: '#be123c', border: '1px solid #fbcfe8', whiteSpace: 'nowrap', boxSizing: 'border-box' }}>
-          .docx
-        </div>
-        <div style={{ display: 'inline-flex', height: '28px', alignItems: 'center', justifyContent: 'center', padding: '0 12px', borderRadius: '9999px', fontSize: '12px', fontWeight: 600, backgroundColor: '#dbeafe', color: '#1e40af', border: '1px solid #bfdbfe', whiteSpace: 'nowrap', boxSizing: 'border-box' }}>
-          .txt
-        </div>
-        <div style={{ display: 'inline-flex', height: '28px', alignItems: 'center', justifyContent: 'center', padding: '0 12px', borderRadius: '9999px', fontSize: '12px', fontWeight: 600, backgroundColor: '#cffafe', color: '#0369a1', border: '1px solid #a5f3fc', whiteSpace: 'nowrap', boxSizing: 'border-box' }}>
-          .md
-        </div>
-        <div style={{ display: 'inline-flex', height: '28px', alignItems: 'center', justifyContent: 'center', padding: '0 12px', borderRadius: '9999px', fontSize: '12px', fontWeight: 600, backgroundColor: '#f3e8ff', color: '#6b21a8', border: '1px solid #e9d5ff', whiteSpace: 'nowrap', boxSizing: 'border-box' }}>
-          .json
-        </div>
+        {['.docx', '.txt', '.md', '.json'].map((ext) => (
+          <span
+            key={ext}
+            className="inline-flex h-7 items-center justify-center rounded-full border border-border-strong px-3 text-xs font-medium text-text-muted"
+          >
+            {ext}
+          </span>
+        ))}
       </div>
     </div>
   )

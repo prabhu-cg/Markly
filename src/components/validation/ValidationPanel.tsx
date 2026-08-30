@@ -36,13 +36,7 @@ export function ValidationPanel({ onScrollToLine }: ValidationPanelProps) {
   }
 
   return (
-    <div className="flex flex-col overflow-hidden h-full">
-      <div className="h-10 flex items-center justify-between px-4 border-b border-slate-200 dark:border-zinc-800 bg-slate-100 dark:bg-zinc-900/50 shrink-0">
-        <span className="text-xs font-medium text-slate-600 dark:text-zinc-400 uppercase tracking-wider">
-          Validation ({issues.length})
-        </span>
-      </div>
-
+    <>
       <IssueFilter filter={issueFilter} counts={counts} onChange={setIssueFilter} />
 
       <IssueList
@@ -52,7 +46,7 @@ export function ValidationPanel({ onScrollToLine }: ValidationPanelProps) {
         onScrollToLine={onScrollToLine}
       />
 
-      <div className="h-12 flex items-center justify-between px-4 border-t border-slate-200 dark:border-zinc-800 bg-slate-100 dark:bg-zinc-900/50 shrink-0 gap-2">
+      <div className="h-12 flex items-center justify-between px-4 border-t border-border bg-surface-muted shrink-0 gap-2">
         <Button
           size="sm"
           variant="ghost"
@@ -70,6 +64,6 @@ export function ValidationPanel({ onScrollToLine }: ValidationPanelProps) {
           Undo ({outputHistory.length})
         </Button>
       </div>
-    </div>
+    </>
   )
 }

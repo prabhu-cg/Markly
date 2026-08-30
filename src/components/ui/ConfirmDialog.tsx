@@ -25,16 +25,16 @@ export function ConfirmDialog({
 
   return (
     <div className="fixed inset-0 bg-black/50 flex items-center justify-center z-50">
-      <div className="bg-white dark:bg-zinc-900 border border-slate-200 dark:border-zinc-800 rounded-lg shadow-lg max-w-sm mx-4">
-        <div className="px-6 py-4 border-b border-slate-200 dark:border-zinc-800">
-          <h2 className="text-lg font-semibold text-slate-900 dark:text-white">{title}</h2>
+      <div className="bg-surface border border-border rounded-md shadow-lg max-w-sm mx-4">
+        <div className="px-6 py-4 border-b border-border">
+          <h2 className="text-lg font-semibold text-text">{title}</h2>
         </div>
 
         <div className="px-6 py-4">
-          <p className="text-slate-700 dark:text-zinc-300 text-sm">{message}</p>
+          <p className="text-text-muted text-sm">{message}</p>
         </div>
 
-        <div className="px-6 py-4 border-t border-slate-200 dark:border-zinc-800 flex gap-3 justify-end">
+        <div className="px-6 py-4 border-t border-border flex gap-3 justify-end">
           <Button
             onClick={onCancel}
             variant="secondary"

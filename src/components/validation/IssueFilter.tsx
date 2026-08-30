@@ -8,38 +8,38 @@ interface IssueFilterProps {
 
 export function IssueFilter({ filter, counts, onChange }: IssueFilterProps) {
   return (
-    <div className="flex gap-2 px-4 py-2 border-b border-slate-200 dark:border-zinc-800 bg-slate-100 dark:bg-zinc-900/50 shrink-0">
+    <div className="flex gap-2 px-4 py-2 border-b border-border bg-surface-muted shrink-0">
       <button
         onClick={() => onChange({ errors: !filter.errors })}
         className={`flex items-center gap-1.5 px-2 py-1 rounded text-xs font-medium transition-colors ${
           filter.errors
-            ? 'bg-slate-300 dark:bg-zinc-700 text-slate-900 dark:text-zinc-100'
-            : 'bg-slate-200 dark:bg-zinc-800 text-slate-600 dark:text-zinc-400 hover:text-slate-800 dark:hover:text-zinc-200'
+            ? 'bg-border-strong/30 text-text'
+            : 'bg-surface text-text-muted hover:text-text'
         }`}
       >
-        <div className="w-2 h-2 rounded-full bg-red-400" />
+        <div className="w-2 h-2 rounded-full bg-danger" />
         Errors ({counts.errors})
       </button>
       <button
         onClick={() => onChange({ warnings: !filter.warnings })}
         className={`flex items-center gap-1.5 px-2 py-1 rounded text-xs font-medium transition-colors ${
           filter.warnings
-            ? 'bg-slate-300 dark:bg-zinc-700 text-slate-900 dark:text-zinc-100'
-            : 'bg-slate-200 dark:bg-zinc-800 text-slate-600 dark:text-zinc-400 hover:text-slate-800 dark:hover:text-zinc-200'
+            ? 'bg-border-strong/30 text-text'
+            : 'bg-surface text-text-muted hover:text-text'
         }`}
       >
-        <div className="w-2 h-2 rounded-full bg-amber-400" />
+        <div className="w-2 h-2 rounded-full bg-warning" />
         Warnings ({counts.warnings})
       </button>
       <button
         onClick={() => onChange({ suggestions: !filter.suggestions })}
         className={`flex items-center gap-1.5 px-2 py-1 rounded text-xs font-medium transition-colors ${
           filter.suggestions
-            ? 'bg-slate-300 dark:bg-zinc-700 text-slate-900 dark:text-zinc-100'
-            : 'bg-slate-200 dark:bg-zinc-800 text-slate-600 dark:text-zinc-400 hover:text-slate-800 dark:hover:text-zinc-200'
+            ? 'bg-border-strong/30 text-text'
+            : 'bg-surface text-text-muted hover:text-text'
         }`}
       >
-        <div className="w-2 h-2 rounded-full bg-sky-400" />
+        <div className="w-2 h-2 rounded-full bg-info" />
         Suggestions ({counts.suggestions})
       </button>
     </div>

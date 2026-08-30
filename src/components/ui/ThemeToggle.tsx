@@ -20,10 +20,10 @@ export function ThemeToggle() {
   return (
     <button
       onClick={handleToggle}
-      className="flex items-center justify-center w-9 h-9 rounded-lg bg-slate-200 dark:bg-zinc-800/50 hover:bg-slate-300 dark:hover:bg-zinc-700/50 border border-slate-300 dark:border-zinc-700/50 hover:border-slate-400 dark:hover:border-zinc-600 transition-colors text-slate-600 dark:text-zinc-400 hover:text-slate-900 dark:hover:text-zinc-200"
+      className="flex h-9 w-9 items-center justify-center rounded-md text-text-muted transition-colors hover:bg-surface hover:text-text"
       title={isDark ? 'Switch to light mode' : 'Switch to dark mode'}
     >
-      {isDark ? <Sun size={20} /> : <Moon size={20} />}
+      {isDark ? <Sun size={18} weight="bold" /> : <Moon size={18} weight="bold" />}
     </button>
   )
 }

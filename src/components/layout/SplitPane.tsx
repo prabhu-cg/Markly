@@ -3,9 +3,12 @@ import { useAppStore } from '../../store/appStore'
 import { InputPanel } from '../input/InputPanel'
 import { OutputPanel } from '../output/OutputPanel'
 import { ValidationPanel } from '../validation/ValidationPanel'
+import { Drawer } from '../ui/Drawer'
 
 export function SplitPane() {
   const validationPanelOpen = useAppStore((s) => s.validationPanelOpen)
+  const setValidationPanelOpen = useAppStore((s) => s.setValidationPanelOpen)
+  const issues = useAppStore((s) => s.issues)
   const editorRef = useRef<HTMLTextAreaElement | null>(null)
 
   const scrollToLine = useCallback((lineNumber: number) => {
@@ -30,19 +33,21 @@ export function SplitPane() {
 
   return (
     <div className="flex flex-1 overflow-hidden">
-      <div className="w-[30%] flex flex-col border-r border-slate-200 dark:border-zinc-800 overflow-hidden shrink-0">
+      <div className="w-[30%] flex flex-col border-r border-border overflow-hidden shrink-0">
         <InputPanel />
       </div>
 
-      <div className={`flex flex-col overflow-hidden border-r border-slate-200 dark:border-zinc-800 ${validationPanelOpen ? 'flex-1 min-w-0' : 'flex-1'}`}>
+      <div className="flex flex-1 min-w-0 flex-col overflow-hidden">
         <OutputPanel editorRef={editorRef} />
       </div>
 
-      {validationPanelOpen && (
-        <div className="w-[25%] flex flex-col overflow-hidden shrink-0">
-          <ValidationPanel onScrollToLine={scrollToLine} />
-        </div>
-      )}
+      <Drawer
+        isOpen={validationPanelOpen}
+        onClose={() => setValidationPanelOpen(false)}
+        title={issues.length > 0 ? `Validation (${issues.length})` : 'Validation'}
+      >
+        <ValidationPanel onScrollToLine={scrollToLine} />
+      </Drawer>
     </div>
   )
 }

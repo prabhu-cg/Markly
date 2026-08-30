@@ -8,7 +8,7 @@ export const MarkdownEditor = forwardRef<HTMLTextAreaElement>(
     return (
       <textarea
         ref={ref}
-        className="flex-1 w-full resize-none bg-transparent px-4 py-3 text-sm font-mono text-slate-900 dark:text-zinc-300 placeholder:text-slate-400 dark:placeholder:text-zinc-600 focus:outline-none overflow-y-auto"
+        className="flex-1 w-full resize-none bg-transparent px-4 py-3 text-sm font-mono text-text placeholder:text-text-subtle focus:outline-none overflow-y-auto"
         value={output}
         onChange={(e) => setOutput(e.target.value)}
         spellCheck={false}

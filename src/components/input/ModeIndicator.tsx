@@ -9,7 +9,7 @@ export function ModeIndicator() {
   }
 
   return (
-    <Badge color={mode === 'convert' ? 'amber' : 'sky'}>
+    <Badge color={mode === 'convert' ? 'warning' : 'info'}>
       {mode === 'convert'
         ? 'Convert Mode'
         : 'Format Mode'}
